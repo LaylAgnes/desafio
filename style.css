@@ -124,7 +124,7 @@ p {
 /* Responsividade para telas pequenas */
 @media (max-width: 400px) {
     .container {
-        padding: 24px 16px; /* Reduz padding para caber melhor */
+        padding: 16px 16px; /* Reduz padding para caber melhor */
         max-width: 100%; /* Usa toda a largura disponível */
             max-width: 395px; /* Largura máxima */
     }
