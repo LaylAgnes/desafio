@@ -126,6 +126,7 @@ p {
     .container {
         padding: 24px 16px; /* Reduz padding para caber melhor */
         max-width: 100%; /* Usa toda a largura disponível */
+            max-width: 390px; /* Largura máxima */
     }
 
     .profile-img {
