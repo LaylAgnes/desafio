@@ -38,7 +38,7 @@ main {
     border-radius: 8px; /* Bordas arredondadas */
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.8); /* Sombra para destaque */
     text-align: center; /* Centraliza texto */
-    max-width: 350px; /* Largura máxima */
+    max-width: 650px; /* Largura máxima */
     width: 90%; /* Largura responsiva para telas menores */
     background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
     transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transição para hover */
