@@ -5,6 +5,11 @@
     font-family: 'Lato', sans-serif;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-color: darkviolet;
     display: flex;
@@ -15,9 +20,6 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
@@ -26,7 +28,10 @@ body {
     width: 90%;
     background-color: rgba(255, 255, 255, 0.1);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    opacity: 1;
+    opacity: 1; /* Mantém sempre visível para garantir o flex funcionar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container:hover {
@@ -94,7 +99,6 @@ h2 {
 p {
   animation-delay: 0.8s;
 }
-
 
 @media (max-width: 400px) {
     .container {
