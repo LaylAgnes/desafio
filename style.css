@@ -1,3 +1,4 @@
+/* Remove margin e padding padrão, aplica box-sizing para facilitar controle de largura e define fonte padrão */
 * {
     margin: 0;
     padding: 0;
@@ -5,127 +6,139 @@
     font-family: 'Lato', sans-serif;
 }
 
+/* Define altura de 100% da viewport para html e body e remove margem padrão */
 html, body {
-    height: 100vh;
+    height: 100vh; /* 100% da altura da tela */
     margin: 0;
 }
 
+/* Estiliza o body */
 body {
-    background-color: darkviolet;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background-color 0.5s ease;
+    background-color: darkviolet; /* Cor de fundo */
+    display: flex; /* Usa Flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport para garantir o centramento */
+    margin: 0; /* Remove margem padrão */
+    transition: background-color 0.5s ease; /* Transição suave para mudanças na cor do fundo */
 }
 
+/* Define o estilo do main */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width:100%;
-  max-height:100%;
+  display: flex; /* Flexbox para o conteúdo interno */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  max-width: 100%; /* Limita a largura máxima para a tela */
+  max-height: 100%; /* Limita a altura máxima para a tela */
 }
 
+/* Estilo do container principal */
 .container {
-    padding: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
-    text-align: center;
-    max-width: 350px;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    opacity: 1; /* Mantém sempre visível para garantir o flex funcionar */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 3rem; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8); /* Sombra para destaque */
+    text-align: center; /* Centraliza texto */
+    max-width: 350px; /* Largura máxima */
+    width: 90%; /* Largura responsiva para telas menores */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transição para hover */
+    opacity: 1; /* Mantém o container visível */
+    display: flex; /* Flexbox para os elementos internos */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
 }
 
+/* Efeito hover para o container */
 .container:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
-    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); /* Sombra mais intensa */
+    background-color: rgba(255, 255, 255, 0.15); /* Fundo um pouco mais claro */
 }
 
+/* Estilo da imagem de perfil */
 .profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 12px;
-    border: 4px solid violet;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    cursor: pointer;
+    width: 100px; /* Largura fixa */
+    height: 100px; /* Altura fixa */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin-bottom: 12px; /* Espaço abaixo da imagem */
+    border: 4px solid violet; /* Borda roxa */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Transição para hover */
+    cursor: pointer; /* Cursor indica que pode clicar */
 }
 
+/* Efeito hover na imagem de perfil */
 .profile-img:hover {
-    transform: scale(1.1);
-    border-color: plum;
+    transform: scale(1.1); /* Aumenta a imagem levemente */
+    border-color: plum; /* Muda a cor da borda */
 }
 
+/* Estilo dos títulos */
 h1, h2 {
-    color: white;
-    margin-bottom: 0.5rem;
-    font-size: 20px;
-    padding: 5px;
+    color: white; /* Cor branca */
+    margin-bottom: 0.5rem; /* Espaço abaixo */
+    font-size: 20px; /* Tamanho da fonte */
+    padding: 5px; /* Espaçamento interno */
 }
 
+/* Estilo dos parágrafos */
 p {
-    color: whitesmoke;
-    margin-bottom: 0.8rem;
-    font-size: 16px;
-    line-height: 1.4;
+    color: whitesmoke; /* Cor branca suave */
+    margin-bottom: 0.8rem; /* Espaço abaixo */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.4; /* Espaçamento entre linhas */
 }
 
-/* Animação fade-in e slide-up */
+/* Animação para fade-in e subida suave */
 @keyframes fadeSlideUp {
   0% {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; /* Transparente */
+    transform: translateY(20px); /* Deslocado para baixo */
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Opaco */
+    transform: translateY(0); /* Posição original */
   }
 }
 
+/* Aplica a animação para os textos */
 h1, h2, p {
-  animation-name: fadeSlideUp;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  opacity: 0;
+  animation-name: fadeSlideUp; /* Nome da animação */
+  animation-duration: 0.8s; /* Duração da animação */
+  animation-fill-mode: forwards; /* Mantém o estado final da animação */
+  animation-timing-function: ease-out; /* Animação desacelera no final */
+  opacity: 0; /* Começa invisível para aplicar a animação */
 }
 
+/* Delay para as animações */
 h1 {
-  animation-delay: 0.2s;
+  animation-delay: 0.2s; /* Começa um pouco depois */
 }
 
 h2 {
-  animation-delay: 0.5s;
+  animation-delay: 0.5s; /* Começa depois do h1 */
 }
 
 p {
-  animation-delay: 0.8s;
+  animation-delay: 0.8s; /* Começa depois do h2 */
 }
 
+/* Responsividade para telas pequenas */
 @media (max-width: 400px) {
     .container {
-        padding: 24px 16px;
-        max-width: 100%;
+        padding: 24px 16px; /* Reduz padding para caber melhor */
+        max-width: 100%; /* Usa toda a largura disponível */
     }
 
     .profile-img {
-        width: 80px;
+        width: 80px; /* Reduz tamanho da imagem */
         height: 80px;
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Ajusta margem */
     }
 
     h1, h2 {
-        font-size: 18px;
+        font-size: 18px; /* Fonte um pouco menor */
     }
 
     p {
-        font-size: 14px;
+        font-size: 14px; /* Fonte menor para melhor leitura */
     }
 }
